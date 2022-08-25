@@ -1,41 +1,114 @@
 *{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+/* Comment: There may be some codes that I have put as a comment as I decided to not use them in this assignment, however I would like to keep them for future references. Please ignore them.
+
+Background colour: I chose a simple dark colour theme as the background of the page as my border colours are very colourful. Having a dark colour as the background can make the brighter colours more appealing. Instead of having a plain solid colour, I coded a gradient to make it more interesting but still having a good balance between dark and bright colours.
+
+Padding: I included a padding of 10px as I didnt want my grid-boxes to touch the edge of the page.
+*/
+
 :root{
-    --color-one: rgb(168, 90, 90);
-    --color-two: rgb(80,50,60);
-    --color-three: rgb(150, 46, 46);
-    --color-four: rgb(149, 175, 224);
-    --border-one: solid 2px rgb(219, 191, 191);    
+    --color-one: rgb(26, 15, 77);
+    --color-two: rgb(10, 4, 29);
+    /*--border-one: solid 3px rgb(255, 255, 255);*/
 }
 
 #bg-grid-container{
-    background-color: var(--color-one);
+    /*background-color: var(--color-one);*/
+    background-image: linear-gradient(var(--color-one),var(--color-two));
     width: 72vh;
     height: 100vh;
     /*width: 100vh;
     height: 100vh;*/
     margin: 0 auto;
+    padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 5px 5px;
+    grid-template-columns: 0.9fr 0.6fr 1.8fr 0.7fr; 
+    grid-template-rows: 1fr 0.6fr 1.5fr 1.1fr;
+    gap: 13px 6px; 
 }
+/*Comment: I chose Akira Vol 1 - page 167 as my reference image.
+
+Grid layout: I used gridlayoutit.com to plan my layout and divided the page into 4 columns and 5 rows. These columns and rows make it easy to create the layout as all the grid-boxes are in different sizes. I divided the page into 3 main rows and then included another row (the 2nd row) due to the thin rectangle box. The columns were slightly more confusing. I used the sides of the three vertical rectangle boxes as my columns.
+
+Gaps: I also included a row gap of 13px and column gap of 6px as I noticed in the reference image that the row gaps are wider than the column gaps.
+
+Colour palette: I chose a rainbow colour palette as this week is pride week. :D (I also find rainbow colours an appealing palette in general.)
+
+Border: I want to make the border more noticeable therefore I designed the border-style as solid with 6px. I created a gradient border rather than a solid colour for each grid-box to add more complexity and appeal.
 
 .grid-item{
     border:var(--border-one);
-    background-color: var(--color-four);
-}
+    background-color: var(--color-four)
+*/
 
 #item-one{
-    grid-column: 1/4;
-    grid-row: 1/3;
-    background-image: linear-gradient(to right, var(--color-one),var(--color-four));
-}
+    grid-column: 3/5 ;
+    grid-row: 2 ;
+    border: 6px solid;
+    border-image: linear-gradient(to right, rgb(137, 108, 233), rgb(226, 88, 76));
+    border-image-slice: 1;
+    display: grid;
+  }
 
 #item-two{
+    grid-column: 3/5 ;
+    grid-row: 1/2 ;
+    border: 6px solid;
+    border-image: linear-gradient(to left, rgb(226, 88, 76), rgb(233, 159, 69));
+    border-image-slice: 1;
+    display: grid;
+  }
+
+#item-three{
+    grid-column: 1/3;
+    grid-row: 1/3;
+    border: 6px solid;
+    border-image: linear-gradient(to left, rgb(233, 159, 69), rgb(224, 222, 99));
+    border-image-slice: 1;
+    display: grid;
+  }
+
+#item-four{
+    grid-column: 1 ;
+    grid-row: 3/4 ;
+    border: 6px solid;
+    border-image: linear-gradient(to right, rgb(224, 222, 99), rgb(167, 236, 127));
+    border-image-slice: 1;
+    display: grid;
+  }
+
+
+#item-five{
     grid-column: 2/4;
-    grid-row: 2/4;
+    grid-row: 3/4;
+    border: 6px solid;
+    border-image: linear-gradient(to right, rgb(167, 236, 127), rgb(97, 207, 166));
+    border-image-slice: 1;
+    display: grid;
+  }
+
+
+#item-six{
+    grid-column: 4 ;
+    grid-row: 3/4 ; 
+    border: 6px solid;
+    border-image: linear-gradient(to right, rgb(97, 207, 166), rgb(108, 204, 219));
+    border-image-slice: 1;
+    display: grid;
 }
+
+#item-seven{
+    grid-column: 1/5 ;
+    grid-row: 4 ; 
+    border: 6px solid;
+    border-image: linear-gradient(to left, rgb(108, 204, 219), rgb(120, 112, 228));
+    border-image-slice: 1;
+    display: grid;
+  }
+
+
