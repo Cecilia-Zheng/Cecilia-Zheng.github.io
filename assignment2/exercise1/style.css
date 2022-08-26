@@ -53,6 +53,14 @@ Border: I want to make the border more noticeable therefore I designed the borde
     border-image: linear-gradient(to right, rgb(137, 108, 233), rgb(226, 88, 76));
     border-image-slice: 1;
     display: grid;
+    animation-name: example-one;
+    animation-duration: 3s;
+    animation-delay: 1s;
+  }
+
+    @keyframes example-one {
+    from {background-color: rgb(137, 108, 233);}
+    to {background-color: rgb(226, 88, 76);}
   }
 
 #item-two{
@@ -62,6 +70,14 @@ Border: I want to make the border more noticeable therefore I designed the borde
     border-image: linear-gradient(to left, rgb(226, 88, 76), rgb(233, 159, 69));
     border-image-slice: 1;
     display: grid;
+    animation-name: example-two;
+    animation-duration: 3s;
+    animation-delay: 3s;
+  }
+
+    @keyframes example-two {
+    from {background-color: rgb(226, 88, 76);}
+    to {background-color: rgb(233, 159, 69);}
   }
 
 #item-three{
@@ -71,6 +87,14 @@ Border: I want to make the border more noticeable therefore I designed the borde
     border-image: linear-gradient(to left, rgb(233, 159, 69), rgb(224, 222, 99));
     border-image-slice: 1;
     display: grid;
+    animation-name: example-three;
+    animation-duration: 3s;
+    animation-delay: 6s;
+  }
+
+    @keyframes example-three {
+    from {background-color: rgb(233, 159, 69);}
+    to {background-color: rgb(224, 222, 99);}
   }
 
 #item-four{
@@ -79,9 +103,15 @@ Border: I want to make the border more noticeable therefore I designed the borde
     border: 6px solid;
     border-image: linear-gradient(to right, rgb(224, 222, 99), rgb(167, 236, 127));
     border-image-slice: 1;
-    display: grid;
+    animation-name: example-four;
+    animation-duration: 3s;
+    animation-delay: 9s;
   }
 
+    @keyframes example-four {
+    from {background-color: rgb(224, 222, 99);}
+    to {background-color: rgb(167, 236, 127);}
+  }
 
 #item-five{
     grid-column: 2/4;
@@ -90,6 +120,14 @@ Border: I want to make the border more noticeable therefore I designed the borde
     border-image: linear-gradient(to right, rgb(167, 236, 127), rgb(97, 207, 166));
     border-image-slice: 1;
     display: grid;
+    animation-name: example-five;
+    animation-duration: 3s;
+    animation-delay: 12s;
+  }
+
+    @keyframes example-five {
+    from {background-color: rgb(167, 236, 127);}
+    to {background-color: rgb(97, 207, 166);}
   }
 
 
@@ -100,7 +138,15 @@ Border: I want to make the border more noticeable therefore I designed the borde
     border-image: linear-gradient(to right, rgb(97, 207, 166), rgb(108, 204, 219));
     border-image-slice: 1;
     display: grid;
-}
+    animation-name: example-six;
+    animation-duration: 3s;
+    animation-delay: 15s;
+  }
+
+    @keyframes example-six {
+    from {background-color: rgb(167, 236, 127);}
+    to {background-color: rgb(108, 204, 219);}
+  }
 
 #item-seven{
     grid-column: 1/5 ;
@@ -109,6 +155,15 @@ Border: I want to make the border more noticeable therefore I designed the borde
     border-image: linear-gradient(to left, rgb(108, 204, 219), rgb(120, 112, 228));
     border-image-slice: 1;
     display: grid;
+    animation-name: example-seven;
+    animation-duration: 3s;
+    animation-delay: 18s;
   }
 
+    @keyframes example-seven {
+    from {background-color: rgb(108, 204, 219);}
+    to {background-color: rgb(120, 112, 228);}
+  }
+
+  /*Comment: I added some animation where a gradient colour moves from one grid-box to another. All the colours match the border that each box has which gives a nice colour blend.*/
 
