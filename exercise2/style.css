@@ -1,0 +1,253 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+:root{
+  --col-01:#000;
+  --col-02:#ffffff;
+  --col-03:#30afea;
+  }
+
+body{
+  display: block;
+  justify-content: center;
+  min-height: 100vh;   
+  background-color: var(--col-01);
+}
+  
+ /*Title design: I added a design in the title by changing a few of the letter colours. This gives a slightly more interesting design than a plain title colour. The colour begins with blue and when you hover over it, it changes from black to white to blue again. (Which is also the colour theme for this website.) I have chosen to use this colour palette as I thought choosing too many colours might confuse myself with the light and dark mode and so keeping with black and white would be the best choice for myself. Adding blue into this palette gives a little more colour and this was inspired by the blue in the background image.)
+ 
+ I included a solid border around the image as I thought it was a little empty without anything around it.*/
+
+.name{
+  color: #fff;
+  width: 100%;
+	padding: 100px;
+  background-image: url(cover.jpg);
+  border: solid var(--col-01) 15px;
+  height: 100vh;
+	background-size: cover;
+	background-position: center;
+  position: relative;
+	font-size: 60px;
+  text-align: right;
+}
+/*I coded so that the title is on the right side of the page as Hosono in the background image is on the left side.*/
+
+.name span{
+  color: var(--col-03);
+  transition: 4s;
+}
+
+.name span:hover{
+    animation: colourChange 3s ease-in 1;
+  }
+@keyframes colourChange {
+    0%{color: var(--col-01);}
+    50%{color: var(--col-02);}
+    100%{color: var(--col-03);}
+  }
+
+/*Button design: I have included a response for the dark/light mode button. When the cursor hovers over the button, the background colour of the button changes. The colour change is based on the colour palette for the website. I have set the transition duration as 0.4s as I thought it was a suitable duration that isn't too slow or fast for the user.*/
+.button {
+  background-color: var(--col-03);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: black;
+  border: 2px solid var(--col-03);
+  }
+  
+  .button:hover {
+    background-color: #0e0e0e;
+    color: white;
+  }
+
+/*About section: I have decided to create new html pages for most of the information about Haruomi Hosono. There is a separate css page for them. (style2.css) 
+
+I have put a short "about him" info on the home page (index.html). I gave a border around the text just so it doesn't look too plain.*/
+.about{
+  border: double var(--col-02) 15px;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+  font-size: 1.3em;
+  background: var(--col-01);
+  color: var(--col-02);
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+	padding: 100px 0px;
+  background:var(--col-01);
+	width: 100%;
+	padding: 100px 0px;
+}
+/*Navigation: Parts of this border design is from "https://www.youtube.com/watch?v=1zFlSLD01Uw" however, I changed a few of the designs such as colour scheme and text designs. There is a transition where the box translate upwards when the mouse hovers over it. It originally was set at -20px however I thought it was a little too slow so I ended up with -40px.*/
+.box
+{
+  position: relative;
+  width: 200px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px, 30px;
+  transition: 0.5s;
+}
+
+.box:hover{
+    transform: translateY(-40px);
+}
+
+/*Colour theme: The colour scheme for these boxes are only white and blue. I tried different combination between black, white and blue however considering both light and dark mode, the mix of white and blue was the best colour combination for these boxes.*/
+.box::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ffffff,#03a9f4);
+}
+
+.box::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,#ffffff,#03a9f4);
+  filter: blur(30px);    
+}
+
+.box span{
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.box span::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background:rgba(255,255,255,0.1);
+  pointer-events: none;
+}
+
+/*The text size, padding and margin of the contents were adjusted so they fit nicely in each of its boxes.*/
+.content{
+  position: relative;
+  z-index: 10;
+  padding-left: 22px;
+  padding-right: 10px;
+}
+
+.content h2{
+  font-size: 1.3em;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.content h3{
+  font-size: 0.8em;
+  color: #fff;
+}
+
+.content p{
+  font-size: 0.8em;
+  color: #fff;
+  margin-bottom: 9px;
+  line-height: 1.4em;
+}
+
+.content a{
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  background: #fff;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.box li{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+/*I included a colour change with all the links as I wanted a response when the user hovers over a link as well as when they have already visited the link.*/
+a:link {
+    color: var(--col-03);
+  }
+  
+  /* visited link */
+a:visited {
+    color: var(--i);
+  }
+  
+  /* mouse over link */
+a:hover {
+    color: var(--col-03);
+  }
+  
+  /* selected link */
+a:active {
+    color: var(--col-03);
+  }
+
+.res-columns{
+    column-width: 25rem;
+  }
+  
+  /*Once the screen size hits 600px, the following codes will apply to the page*/
+  /* medium devices 600 - 992 */
+  @media only screen and (min-width: 600px) {
+    :root{
+      font-size: 0.9em;
+    }
+    
+    .img-wrapper{
+      width: 75%;
+      margin: 1.5rem auto;
+    }
+  }
+  
+  /* medium devices 992 + */
+  @media only screen and (min-width: 992px) {
+    :root{
+      font-size: 1.05em;
+    }
+  
+    .img-wrapper{
+      max-width: fit-content;
+      float: right;
+      margin: 1.5rem;
+    }
+  }
+
+  @media all and (prefers-reduced-motion){
+  }
+
+  

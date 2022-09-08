@@ -1,0 +1,144 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+/*I ensured that the entire website has the same text font.*/
+
+:root{
+  --col-01:#000;
+  --col-02:#f2fbeb;
+  --col-03:#30afea;
+  --col-04:#7885e8;
+  --col-05:#e8bd78;
+  --col-06:#b6e878;
+  --col-07:#2296d9;
+}
+
+body{
+    display: flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--col-01);
+    color: var(--col-02);
+}
+
+/*The design of the button is the same as the home page light/dark mode button*/
+.button {
+  background-color: var(--col-03);
+  color: rgb(15, 15, 15);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: black;
+  border: 2px solid var(--col-03);
+}
+
+.button:hover {
+  background-color: #0e0e0e;
+  color: white;
+}
+
+/*I included a border around the information and changed the border radius to 50px as I like the smooth curve design on the edge.*/
+section{
+    border: 1em;
+    border-style: double;
+    border-color: var(--col-03);
+    border-radius: 50px;
+    margin: 2em;
+    padding: 2em;
+}
+
+h2{
+    margin-bottom: 0.1em;
+}
+
+.title{
+    position: relative;
+    align-items: center;
+}
+
+/*The wave animation was inspired by https://www.youtube.com/watch?v=m1ZKHPbnyjo. Adding onto the wave text design, I included a colour change when the mouse hovers over the page title. Rather than sticking with the black, while, blue colour theme, I made the colourcycle colours more colourful, starting from purple-->yellow-->green-->blue. I decided to do this so that it is different from the original colour theme of only three simple colours.*/
+.title span{
+    position: relative;
+    display: inline-block;
+    color: var(--col-02);
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 1.3s ease-in-out infinite;
+    margin-bottom: 0.5em;
+    animation-delay: calc(0.1s * var(--i));
+    color: var(--col-03);
+  }
+
+  .title span{
+    transition: 4s;
+  }
+  
+  .title span:hover{
+    /*color:var(--col-04);
+    transition: 0s */
+    animation: colourCycle 3s ease-in 1;
+  }
+
+  /*I made the colourchange percentage between colour 6 and 7 a little faster as colour 7 is very similar to the original blue colour of the title.*/
+  @keyframes colourCycle {
+    0%{color: var(--col-04);}
+    40%{color: var(--col-05);}
+    80%{color: var(--col-06);}
+    100%{color: var(--col-07);}
+  }
+
+  /*The animation was set at -20px as I thought having it lower or higher than -20px was too slow or fast.*/
+@keyframes animate
+{
+    0%{
+      transform: translateY(0px);
+    }
+    20%{
+      transform: translateY(-20px);
+    }
+    40%, 100%{
+      transform: translateY(0px);
+    }
+  }
+
+  /*The link colours are the same as the home page*/
+a:link {
+    color: var(--col-03);
+  }
+  a:visited {
+    color: var(--i);
+  }
+  
+  a:hover {
+    color: var(--col-03);
+  }
+  
+  a:active {
+    color: var(--col-03);
+  }
+
+  .img-wrapper{
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .img-figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .article-img{
+    width: 30%;
+  }
