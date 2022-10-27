@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" name="viewport" content="width=device-width, intial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+
+        <script src="script.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=ZCOOL KuaiLe' rel='stylesheet'>
+    </head>
+    <title>Website as TWO FACES</title>
+<!-- Dont forget favicon -->
+    
+    <body>
+      <audio autoplay loop>
+        <source src="sound/bgmusic.mp3" />
+      </audio>
+
+    <p>Seems a little dark outside,<br>maybe turn the lamp off first...</p>
+
+    <!-- <img src="img/IM room.png" width="1140"> -->
+    <div id="bg1" class="bg1"></div>
+    <div id="bg2" class="bg2"></div>
+    
+    <!-- Hidden buttons for each secret section for the room -->
+    <div class="container">
+        <button id="doorbtn" onclick="door()" >dddd<br>o<br>o<br>r<br>d<br>o</button>
+        <button id="flowerbtn"onclick="flower()">flow<br>er p<br>ot</button>
+        <button id="bearbtn" onclick="bear()">b</button>
+        <button id="bedbtn" onclick="bed()">hand</button>
+        <button id="paintbtn" onclick="painting()">pppaaaa<br>ooooooo<br>nnjinting<br>-----------</button>
+        <button id="bookbtn" onclick="book()">book</button>
+      </div>
+
+<!-- The button to change the background image to light or dark -->
+    <button type="button" onclick="change()" id="btnID">change </button>
+
+    <!-- Audio for the window -->
+    <img id="windowimg" src="img/rectangle.jpg" />
+    <audio id="paint" src="sound/window.mp3"></audio>
+    <script>
+      var audio = document.getElementById("paint");
+      var img = document.getElementById("windowimg");
+      function play() {
+          paint.play();
+      }
+      function stop() {
+          paint.pause();
+      }
+      img.addEventListener('mouseover', play);
+      img.addEventListener('mouseout', stop);
+    </script>
+   
+    </body>
+    
+</html>
