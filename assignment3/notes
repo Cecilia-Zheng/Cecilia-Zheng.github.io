@@ -1,0 +1,22 @@
+        <h1>Cecilia</h1>
+        <h2>I'm a heading</h2>
+        <p>I'm a paragraph</p>
+        <button>I'm a clickable button with words on it</button>
+        <ul><li>I am a unordered dot point list</li></ul>
+        <ol><li>I am a ordered number dot point list</li></ol>
+        <ol start="40"><li>I am an ordered number dot point list that starts from 40</li></ol>
+
+        <b>I bold the words</b>
+        <br><br>
+        <strong>Define important text in a document</strong>
+        <br><br>
+        <i>italic</i>
+        <br><br>
+        <em>Used to define emphasized text. The words are displayed in italic.</em>
+        <br><br>
+        <del>I cross myself out</del>
+        <br><br>
+        <u>I underline myself</u>
+        <br><br>
+        <sup>This defines superscript text. Above the normal text line.</sup>
+        <sub>This defines subscript text.Below the normal text line.</sub>
